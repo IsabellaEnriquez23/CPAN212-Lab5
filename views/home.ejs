@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Lab 5</title>
+	</head> 
+
+	<body> 
+		<div> 
+			<header> 
+				<nav> 
+					<a href="/"> Home</a> 
+				</nav> 
+			</header> 
+			<% if (name) { %> 
+			<div>
+				<h2>Welcome to CPAN212!</h2> 
+				<a href="/api/logout">Logout</a> 
+
+				<% } else { %> 
+				<div> 
+					<h2>You are not logged in</h2> 
+					<p>Please log in</p> 
+					<a href="/login">Login</a> 
+				</div> 
+				<% } %> 
+			</div> 
+		</div> 
+	</body> 
+
+</html> 

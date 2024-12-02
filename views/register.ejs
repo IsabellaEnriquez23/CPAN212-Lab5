@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head> 
+		<title>Lab 5 Register</title> 
+	</head> 
+	<body> 
+		<div> 
+			<header> 
+				<nav> 
+					<a href="/">Home</a> 
+				</nav> 
+			</header> 
+			<div > 
+				<h2>Register</h2> 
+				<form method="post" action="/api/register"> 
+					<% if(error) { %> 
+						<p><%= error %></p> 
+					<% } %> 
+					<div> 
+						<label for="username">Username:</label> 
+						<input type="text" id="username" name="username" placeholder="username" /> 
+					</div> 
+					<div> 
+						<label for="email">Email:</label> 
+						<input type="email" id="email" name="email" placeholder="email" /> 
+					</div> 
+					<div> 
+						<label for="password">Password:</label> 
+						<input type="password" id="password" name="password" placeholder="password" /> 
+					</div> 
+					<div> 
+						<label for="confirm-password">Confirm Password:</label> 
+						<input type="password" id="confirm-password" name="confirmpassword"
+							placeholder="password" /> 
+					</div> 
+					<button type="submit" onClick={submit}>Register</button> 
+					<p> 
+						Have an account?
+						<a href="/login">Click to login</a> 
+					</p> 
+				</form> 
+			</div> 
+		</div> 
+	</body> 
+
+</html>

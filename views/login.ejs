@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head>
+		<title>Lab 5 Login</title> 
+	</head> 
+	<body>  
+		<div> 
+			<header> 
+				<nav> 
+					<a href="/">Home</a> 
+				</nav> 
+			</header> 
+			<div> 
+				<h2>Login</h2> 
+				<form method="post" , action="/api/login"> 
+					<% if(error) { %> 
+						<p><%= error %></p> 
+					<% } %> 
+					<div> 
+						<label for="username">Username:</label> 
+						<input type="text" id="username" name="username" placeholder="username"/> 
+					</div> 
+					<div> 
+						<label for="password">Password:</label> 
+						<input type="password" id="password" name="password" placeholder="password" /> 
+					</div> 
+
+					<button type="submit" onClick={submit}>Login</button> 
+					<p> 
+						Don't have an account?
+						<a href="/register">Click to register</a> 
+					</p> 
+				</form> 
+			</div> 
+		</div> 
+	</body> 
+
+</html>
